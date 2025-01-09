@@ -8,6 +8,6 @@ namespace CreditCardApp.Api.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
         // DbSet para la entidad Card
-        public DbSet<Card> Cards { get; set; }
+        public DbSet<Card> Cards { get; set; } = null!;
     }
 }
