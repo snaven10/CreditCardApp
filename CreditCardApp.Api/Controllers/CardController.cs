@@ -2,6 +2,7 @@ using AutoMapper;
 using CreditCardApp.Api.Data;
 using CreditCardApp.Api.DTOs;
 using CreditCardApp.Api.Entities;
+using CreditCardApp.Api.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -12,6 +13,7 @@ namespace CreditCardApp.Api.Controllers
     public class CardController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
+        private readonly PdfGeneratorService _pdfGeneratorService;
         private readonly IMapper _mapper;
 
         public CardController(ApplicationDbContext context, IMapper mapper)
@@ -105,6 +107,23 @@ namespace CreditCardApp.Api.Controllers
             };
 
             return Ok(statement);
+        }
+
+        [HttpGet("{id}/export-pdf")]
+        public IActionResult ExportToPdf(int id)
+        {
+            var card = _context.Cards.Include(c => c.Purchases)
+                                     .Include(c => c.Payments)
+                                     .FirstOrDefault(c => c.Id == id);
+
+            if (card == null)
+            {
+                return NotFound("Tarjeta no encontrada.");
+            }
+
+            var pdfBytes = _pdfGeneratorService.GenerateStatementPdf(card);
+
+            return File(pdfBytes, "application/pdf", "EstadoDeCuenta.pdf");
         }
     }
 }
