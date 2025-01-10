@@ -29,24 +29,34 @@ namespace CreditCardApp.Api.Controllers
             return Ok(paymentDtos);
         }
 
-        // GET: api/payment/{id}
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetPayment(int id)
-        {
-            var payment = await _context.Payments.FindAsync(id);
-            if (payment == null) return NotFound();
-            var paymentDto = _mapper.Map<PaymentDto>(payment);
-            return Ok(paymentDto);
-        }
-
         // POST: api/payment
         [HttpPost]
         public async Task<IActionResult> CreatePayment([FromBody] PaymentDto paymentDto)
         {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+
             var payment = _mapper.Map<Payment>(paymentDto);
             _context.Payments.Add(payment);
             await _context.SaveChangesAsync();
-            return CreatedAtAction(nameof(GetPayment), new { id = payment.Id }, paymentDto);
+
+            return CreatedAtAction(nameof(GetPayments), new { id = payment.Id }, paymentDto);
+        }
+
+        // PUT: api/payment/{id}
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdatePayment(int id, [FromBody] PaymentDto paymentDto)
+        {
+            if (id != paymentDto.Id) return BadRequest("Payment ID mismatch.");
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+
+            var existingPayment = await _context.Payments.FindAsync(id);
+            if (existingPayment == null) return NotFound();
+
+            _mapper.Map(paymentDto, existingPayment);
+            _context.Entry(existingPayment).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+
+            return NoContent();
         }
 
         // DELETE: api/payment/{id}
@@ -55,8 +65,10 @@ namespace CreditCardApp.Api.Controllers
         {
             var payment = await _context.Payments.FindAsync(id);
             if (payment == null) return NotFound();
+
             _context.Payments.Remove(payment);
             await _context.SaveChangesAsync();
+
             return NoContent();
         }
     }

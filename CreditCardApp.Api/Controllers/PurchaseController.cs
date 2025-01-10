@@ -29,24 +29,34 @@ namespace CreditCardApp.Api.Controllers
             return Ok(purchaseDtos);
         }
 
-        // GET: api/purchase/{id}
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetPurchase(int id)
-        {
-            var purchase = await _context.Purchases.FindAsync(id);
-            if (purchase == null) return NotFound();
-            var purchaseDto = _mapper.Map<PurchaseDto>(purchase);
-            return Ok(purchaseDto);
-        }
-
         // POST: api/purchase
         [HttpPost]
         public async Task<IActionResult> CreatePurchase([FromBody] PurchaseDto purchaseDto)
         {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+
             var purchase = _mapper.Map<Purchase>(purchaseDto);
             _context.Purchases.Add(purchase);
             await _context.SaveChangesAsync();
-            return CreatedAtAction(nameof(GetPurchase), new { id = purchase.Id }, purchaseDto);
+
+            return CreatedAtAction(nameof(GetPurchases), new { id = purchase.Id }, purchaseDto);
+        }
+
+        // PUT: api/purchase/{id}
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdatePurchase(int id, [FromBody] PurchaseDto purchaseDto)
+        {
+            if (id != purchaseDto.Id) return BadRequest("Purchase ID mismatch.");
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+
+            var existingPurchase = await _context.Purchases.FindAsync(id);
+            if (existingPurchase == null) return NotFound();
+
+            _mapper.Map(purchaseDto, existingPurchase);
+            _context.Entry(existingPurchase).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+
+            return NoContent();
         }
 
         // DELETE: api/purchase/{id}
@@ -55,8 +65,10 @@ namespace CreditCardApp.Api.Controllers
         {
             var purchase = await _context.Purchases.FindAsync(id);
             if (purchase == null) return NotFound();
+
             _context.Purchases.Remove(purchase);
             await _context.SaveChangesAsync();
+
             return NoContent();
         }
     }
