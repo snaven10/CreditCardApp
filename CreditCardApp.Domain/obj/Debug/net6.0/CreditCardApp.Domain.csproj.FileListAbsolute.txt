@@ -1,0 +1,12 @@
+C:\Users\JoséSamuelFunesRamír\Pictures\Tecnologias sv\proyecto\CreditCardApp.Domain\bin\Debug\net6.0\CreditCardApp.Domain.deps.json
+C:\Users\JoséSamuelFunesRamír\Pictures\Tecnologias sv\proyecto\CreditCardApp.Domain\bin\Debug\net6.0\CreditCardApp.Domain.dll
+C:\Users\JoséSamuelFunesRamír\Pictures\Tecnologias sv\proyecto\CreditCardApp.Domain\bin\Debug\net6.0\CreditCardApp.Domain.pdb
+C:\Users\JoséSamuelFunesRamír\Pictures\Tecnologias sv\proyecto\CreditCardApp.Domain\obj\Debug\net6.0\CreditCardApp.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\JoséSamuelFunesRamír\Pictures\Tecnologias sv\proyecto\CreditCardApp.Domain\obj\Debug\net6.0\CreditCardApp.Domain.AssemblyInfoInputs.cache
+C:\Users\JoséSamuelFunesRamír\Pictures\Tecnologias sv\proyecto\CreditCardApp.Domain\obj\Debug\net6.0\CreditCardApp.Domain.AssemblyInfo.cs
+C:\Users\JoséSamuelFunesRamír\Pictures\Tecnologias sv\proyecto\CreditCardApp.Domain\obj\Debug\net6.0\CreditCardApp.Domain.csproj.CoreCompileInputs.cache
+C:\Users\JoséSamuelFunesRamír\Pictures\Tecnologias sv\proyecto\CreditCardApp.Domain\obj\Debug\net6.0\CreditCardApp.Domain.sourcelink.json
+C:\Users\JoséSamuelFunesRamír\Pictures\Tecnologias sv\proyecto\CreditCardApp.Domain\obj\Debug\net6.0\CreditCardApp.Domain.dll
+C:\Users\JoséSamuelFunesRamír\Pictures\Tecnologias sv\proyecto\CreditCardApp.Domain\obj\Debug\net6.0\refint\CreditCardApp.Domain.dll
+C:\Users\JoséSamuelFunesRamír\Pictures\Tecnologias sv\proyecto\CreditCardApp.Domain\obj\Debug\net6.0\CreditCardApp.Domain.pdb
+C:\Users\JoséSamuelFunesRamír\Pictures\Tecnologias sv\proyecto\CreditCardApp.Domain\obj\Debug\net6.0\ref\CreditCardApp.Domain.dll

@@ -7,21 +7,21 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AspNetCore.HealthChecks.ApplicationStatus" Version="7.0.0" />  
-    <PackageReference Include="AspNetCore.HealthChecks.SqlServer" Version="7.0.0" />  
-    <PackageReference Include="AspNetCore.HealthChecks.UI" Version="7.0.2" />  
-    <PackageReference Include="AspNetCore.HealthChecks.UI.Client" Version="7.1.0" />  
+    <PackageReference Include="AspNetCore.HealthChecks.ApplicationStatus" Version="7.0.0" />
+    <PackageReference Include="AspNetCore.HealthChecks.SqlServer" Version="7.0.0" />
+    <PackageReference Include="AspNetCore.HealthChecks.UI" Version="7.0.2" />
+    <PackageReference Include="AspNetCore.HealthChecks.UI.Client" Version="7.1.0" />
     <PackageReference Include="AspNetCore.HealthChecks.UI.InMemory.Storage" Version="7.0.0" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
     <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
-    <PackageReference Include="itext7" Version="9.0.0" />
+    <PackageReference Include="MediatR" Version="12.4.1" />
     <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="7.0.0" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.9">
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.9" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="7.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CreditCardApp.Application\CreditCardApp.Application.csproj" />
+    <ProjectReference Include="..\CreditCardApp.Infrastructure\CreditCardApp.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

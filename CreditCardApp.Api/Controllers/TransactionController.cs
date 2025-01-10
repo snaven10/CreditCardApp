@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
-using CreditCardApp.Api.Data;
-using CreditCardApp.Api.DTOs;
-using CreditCardApp.Api.Entities;
+using CreditCardApp.Infrastructure.Persistence;
+using CreditCardApp.Application.DTOs;
+using CreditCardApp.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 

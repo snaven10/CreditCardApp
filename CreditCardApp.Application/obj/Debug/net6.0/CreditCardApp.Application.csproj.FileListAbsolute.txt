@@ -1,0 +1,16 @@
+C:\Users\JoséSamuelFunesRamír\Pictures\Tecnologias sv\proyecto\CreditCardApp.Application\bin\Debug\net6.0\CreditCardApp.Application.deps.json
+C:\Users\JoséSamuelFunesRamír\Pictures\Tecnologias sv\proyecto\CreditCardApp.Application\bin\Debug\net6.0\CreditCardApp.Application.dll
+C:\Users\JoséSamuelFunesRamír\Pictures\Tecnologias sv\proyecto\CreditCardApp.Application\bin\Debug\net6.0\CreditCardApp.Application.pdb
+C:\Users\JoséSamuelFunesRamír\Pictures\Tecnologias sv\proyecto\CreditCardApp.Application\bin\Debug\net6.0\CreditCardApp.Domain.dll
+C:\Users\JoséSamuelFunesRamír\Pictures\Tecnologias sv\proyecto\CreditCardApp.Application\bin\Debug\net6.0\CreditCardApp.Domain.pdb
+C:\Users\JoséSamuelFunesRamír\Pictures\Tecnologias sv\proyecto\CreditCardApp.Application\obj\Debug\net6.0\CreditCardApp.Application.csproj.AssemblyReference.cache
+C:\Users\JoséSamuelFunesRamír\Pictures\Tecnologias sv\proyecto\CreditCardApp.Application\obj\Debug\net6.0\CreditCardApp.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\JoséSamuelFunesRamír\Pictures\Tecnologias sv\proyecto\CreditCardApp.Application\obj\Debug\net6.0\CreditCardApp.Application.AssemblyInfoInputs.cache
+C:\Users\JoséSamuelFunesRamír\Pictures\Tecnologias sv\proyecto\CreditCardApp.Application\obj\Debug\net6.0\CreditCardApp.Application.AssemblyInfo.cs
+C:\Users\JoséSamuelFunesRamír\Pictures\Tecnologias sv\proyecto\CreditCardApp.Application\obj\Debug\net6.0\CreditCardApp.Application.csproj.CoreCompileInputs.cache
+C:\Users\JoséSamuelFunesRamír\Pictures\Tecnologias sv\proyecto\CreditCardApp.Application\obj\Debug\net6.0\CreditCardApp.Application.sourcelink.json
+C:\Users\JoséSamuelFunesRamír\Pictures\Tecnologias sv\proyecto\CreditCardApp.Application\obj\Debug\net6.0\CreditCa.E6E49AD1.Up2Date
+C:\Users\JoséSamuelFunesRamír\Pictures\Tecnologias sv\proyecto\CreditCardApp.Application\obj\Debug\net6.0\CreditCardApp.Application.dll
+C:\Users\JoséSamuelFunesRamír\Pictures\Tecnologias sv\proyecto\CreditCardApp.Application\obj\Debug\net6.0\refint\CreditCardApp.Application.dll
+C:\Users\JoséSamuelFunesRamír\Pictures\Tecnologias sv\proyecto\CreditCardApp.Application\obj\Debug\net6.0\CreditCardApp.Application.pdb
+C:\Users\JoséSamuelFunesRamír\Pictures\Tecnologias sv\proyecto\CreditCardApp.Application\obj\Debug\net6.0\ref\CreditCardApp.Application.dll

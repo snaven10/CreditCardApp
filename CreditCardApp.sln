@@ -5,6 +5,14 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreditCardApp.Api", "CreditCardApp.Api\CreditCardApp.Api.csproj", "{6A609013-76CB-4035-B15A-4FAF82DF71B0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreditCardApp.Application", "CreditCardApp.Application\CreditCardApp.Application.csproj", "{8229B218-552A-46FA-B61B-F3205CD886DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreditCardApp.Domain", "CreditCardApp.Domain\CreditCardApp.Domain.csproj", "{D734BD56-F152-429C-A1D4-DB2312031477}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreditCardApp.Infrastructure", "CreditCardApp.Infrastructure\CreditCardApp.Infrastructure.csproj", "{D4FBF6D5-7E86-4847-ABFB-8455194908E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreditCardApp.Tests", "CreditCardApp.Tests\CreditCardApp.Tests.csproj", "{410DAB84-990F-4DF2-8B6D-66DBB91C6A4C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +26,21 @@ Global
 		{6A609013-76CB-4035-B15A-4FAF82DF71B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A609013-76CB-4035-B15A-4FAF82DF71B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A609013-76CB-4035-B15A-4FAF82DF71B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8229B218-552A-46FA-B61B-F3205CD886DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8229B218-552A-46FA-B61B-F3205CD886DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8229B218-552A-46FA-B61B-F3205CD886DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8229B218-552A-46FA-B61B-F3205CD886DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D734BD56-F152-429C-A1D4-DB2312031477}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D734BD56-F152-429C-A1D4-DB2312031477}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D734BD56-F152-429C-A1D4-DB2312031477}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D734BD56-F152-429C-A1D4-DB2312031477}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4FBF6D5-7E86-4847-ABFB-8455194908E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4FBF6D5-7E86-4847-ABFB-8455194908E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4FBF6D5-7E86-4847-ABFB-8455194908E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4FBF6D5-7E86-4847-ABFB-8455194908E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{410DAB84-990F-4DF2-8B6D-66DBB91C6A4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{410DAB84-990F-4DF2-8B6D-66DBB91C6A4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{410DAB84-990F-4DF2-8B6D-66DBB91C6A4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{410DAB84-990F-4DF2-8B6D-66DBB91C6A4C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

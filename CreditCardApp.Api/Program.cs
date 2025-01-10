@@ -1,12 +1,16 @@
-using CreditCardApp.Api.Data;
+using CreditCardApp.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
-using FluentValidation;
 using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Web;
 using HealthChecks.ApplicationStatus.DependencyInjection;
+using FluentValidation;
 using FluentValidation.AspNetCore;
+using CreditCardApp.Application.Interfaces;
+using MediatR;
+using System.Reflection;
+using CreditCardApp.Infrastructure.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,15 +21,27 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddValidatorsFromAssemblyContaining<Program>();
-builder.Services.AddFluentValidation(fv =>
-{
-    fv.RegisterValidatorsFromAssemblyContaining<Program>();
-});
+
+// Registrar FluentValidation
+builder.Services.AddControllers()
+    .AddFluentValidation(config =>
+    {
+        config.RegisterValidatorsFromAssemblies(AppDomain.CurrentDomain.GetAssemblies());
+        config.DisableDataAnnotationsValidation = true;
+    });
+
+// Registro de MediatR
+builder.Services.AddMediatR(cfg =>
+    cfg.RegisterServicesFromAssemblies(AppDomain.CurrentDomain.GetAssemblies()));
+
+
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 // Registro del DbContext
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Configuración de health checks
+builder.Services.AddScoped<PdfGeneratorService>();
+// Configuraciï¿½n de health checks
 builder.Services
     .AddHealthChecks()
     .AddApplicationStatus(name: "api_status", tags: new[] { "api" })
@@ -45,7 +61,7 @@ builder.Services.AddHealthChecksUI(options =>
 
 var app = builder.Build();
 
-app.MapGet("/", () => "¡Hola, mundo!");
+app.MapGet("/", () => "ï¿½Hola, mundo!");
 // Map HealthChecks endpoints
 app.MapHealthChecks("/healthz", new HealthCheckOptions
 {
