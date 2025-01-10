@@ -11,6 +11,7 @@ namespace CreditCardApp.Api.Mappings
             CreateMap<Card, CardDto>().ReverseMap();
             CreateMap<Purchase, PurchaseDto>().ReverseMap();
             CreateMap<Payment, PaymentDto>().ReverseMap();
+            CreateMap<Transaction, TransactionDto>().ReverseMap();
         }
     }
 }

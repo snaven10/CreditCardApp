@@ -11,5 +11,6 @@ namespace CreditCardApp.Api.Data
         public DbSet<Card> Cards { get; set; } = null!;
         public DbSet<Purchase> Purchases { get; set; } = null!;
         public DbSet<Payment> Payments { get; set; } = null!;
+        public DbSet<Transaction> Transactions { get; set; } = null!;
     }
 }
