@@ -9,6 +9,7 @@ namespace CreditCardApp.Api.Mappings
         public MappingProfile()
         {
             CreateMap<Card, CardDto>().ReverseMap();
+            CreateMap<Purchase, PurchaseDto>().ReverseMap();
         }
     }
 }
